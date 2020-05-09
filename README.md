@@ -1,6 +1,6 @@
 # Rapidminer-Server-Setup-on-Ubuntu
 
-How to setup Rapidminer Server 9.6 on Ubuntu Server 18.04/ 20.04 
+How to setup Rapidminer Server 9.6 on Linux Ubuntu Server 18.04/ 20.04 
 
 Below Guide explains how to installl and setup Rapidminer server 9.6 on a Ubuntu VPS 
 
