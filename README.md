@@ -5,10 +5,10 @@ How to setup Rapidminer Server 9.6 on Ubuntu Server 18.04/ 20.04
 Below Guide explains how to installl and setup Rapidminer server 9.6 on a Ubuntu VPS 
 
 ## Requirements
-Ubuntu Server 18.04/20.04 
-RAM - 4 GB
-DISK - 10 GB
-CPU - 2vCPU
+Ubuntu Server 18.04/20.04  
+RAM - 4 GB  
+DISK - 10 GB  
+CPU - 2vCPU  
 
 ## Installation
 
@@ -32,7 +32,7 @@ cd /usr/lib/jvm
 tar –xvf yourjavadownloadfilename.tar.gz
 nano /etc/environment
 ```
-Add this line to /etc/environment file –
+Add this line to /etc/environment file –  
 JAVA_HOME=" /usr/lib/jvm/jdk1.8.0_221"    
 
 Run this command -
@@ -43,7 +43,7 @@ source  /etc/environment
 sudo update-alternatives --install "/usr/bin/java" "java" = "/usr/lib/jvm/jdk1.8.0_221/bin/java"   0
 ```
 
-Check JAVA HOME is defined properly with this below commands -
+Check JAVA HOME is defined properly with these below commands -
 
 ```sh
 echo $JAVA_HOME
@@ -111,21 +111,21 @@ Note:  Above commands must be run inside server GUI
 Now follow the on screen installation  process and enter license key of RapidMiner Server (Can be found on official website) when asked
 
 
-Configure Server Settings as follows:
-Hostname: localhost
-Port for web interface: 8888
-Server Memory (in MB): 2048
-Number of bundled Job Containers: 1
-Internal port: 5672
-Memory per Job Container (in MB): 2048
+Configure Server Settings as follows:  
+Hostname: localhost  
+Port for web interface: 8888  
+Server Memory (in MB): 2048  
+Number of bundled Job Containers: 1  
+Internal port: 5672  
+Memory per Job Container (in MB): 2048  
 
 
-Configure Database as follows
-Hostname: localhost
-Port: 5432
-Database schema: rapidminer_server
-Database username: rapidminer
-Database password: rapidminer
+Configure Database as follows  
+Hostname: localhost  
+Port: 5432  
+Database schema: rapidminer_server  
+Database username: rapidminer  
+Database password: rapidminer  
 
 
 Click try connection to check that it's correctly working
@@ -144,7 +144,7 @@ cd /rapidminer-server/rapidminer-server-installer-9.3.2/bin
 
 Wait until all the commands finish and then open a navigator and go to `yourdomain:8080` OR `yourserverpublicIP:8080`
 
-Log in with default rapidminer credentials:
+Log in with default rapidminer credentials:  
 - Username: admin
 - Password: changeit
   
