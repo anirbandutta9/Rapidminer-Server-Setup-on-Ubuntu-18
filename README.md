@@ -154,3 +154,7 @@ Log in with default rapidminer credentials:
 Follow the 2nd part of this guide for ubuntu 18.04 and 20.04 -> 
 https://docs.rapidminer.com/9.5/server/configure/settings/run-as-a-service.html
 
+
+### Having trouble setting the server up ?  
+
+Hire me now to do the setup for you ->   https://www.anirbandutta.in/contact
