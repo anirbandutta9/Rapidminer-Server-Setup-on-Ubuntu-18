@@ -83,11 +83,41 @@ CREATE USER rapidminer WITH ENCRYPTED PASSWORD 'rapidminer';
 GRANT ALL PRIVILEGES ON DATABASE rapidminer_server TO rapidminer;
 ```
 
-### Install GUI for Ubuntu Server
+### Install GUI for Ubuntu Server  
 
-Follow the below Guide as it is to install GUI in the Ubuntu server -
-https://linuxize.com/post/how-to-install-xrdp-on-ubuntu-18-04/
+Install Xfce on your server  
 
+```sh
+apt-get install  xfce4 xfce4-goodies xorg dbus-x11 x11-xserver-utils  
+```
+
+Install Xrdp  
+
+```sh
+apt-get install  xrdp   
+``` 
+
+Add the xrdp user to the SSL-CERT group and restart Xrdp:  
+
+```sh
+adduser xrdp ssl-cert  
+systemctl restart xrdp
+```
+
+Allow port 3389 on Firewall to accept traffic (optional)  
+
+```sh
+ufw allow 3389
+```
+
+Use any RDP client (like Windows RDP client) to connect to the ubuntu server GUI and login with root user and password.  
+
+If you have a Windows PC, you can use the default RDP client. Type “remote” in the Windows search bar and click on “Remote Desktop Connection”. This will open up the RDP client. In the “Computer” field, enter the remote server IP address and click “Connect”.  
+
+```sh
+username -> 'root'
+password -> 'yourserverpassword'
+```
 
 ### Install RapidMiner Server
 
@@ -99,7 +129,7 @@ Transfer downloaded file to server using FTP/SFTP software FileZilla Or Winscp a
 unzip rapidminerdownload.zip
 ```
 
-Open terminal inside GUI and run the following commands -
+Open terminal inside GUI (running this from within GUI is important else it will not work) and run the following commands -
 
 ```sh
 cd rapidminer-server-installer-9.6.0/bin
